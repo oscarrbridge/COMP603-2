@@ -1,27 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
-/**
- *
- * @author oscar
- */
 public class Main {
+
     public static void main(String[] args) {
-        Databases data = new Databases();
-        System.out.println(data.CreateConnection());
-        
+
+        CreateDatabases();
+
         frmLogin login = new frmLogin();
         login.show();
     }
-    
-    private void CreateDatabases() {
-        
+
+    private static void CreateDatabases() {
+
+        Databases data = new Databases();
+
         String users_table = "CREATE TABLE Users "
-                + "(ID INT, "
+                + "(ID INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY, "
                 + "Username VARCHAR(20), "
                 + "Password VARCHAR(20), "
-                + "Credits INT;";
+                + "Credits INT)";
+
+        data.GenPush(users_table);
+        data.CloseConnection();
     }
 }

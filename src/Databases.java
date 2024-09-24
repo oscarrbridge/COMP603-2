@@ -5,14 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-/**
- *
- * @author oscar
- */
 public class Databases {
 
     public static Connection conn;
@@ -20,14 +12,19 @@ public class Databases {
     public static String username = "COMP607";
     public static String password = "1234";
 
-    public boolean CreateConnection() {
+    Databases() {
         //create connection to database
         try {
             conn = DriverManager.getConnection(url, username, password);
-            return true;
+            System.out.println("Connection Created");
+
         } catch (SQLException ex) {
-            return false;
+            System.out.println("Connection could not be made. Error: " + ex);
         }
+    }
+
+    public boolean CreateConnection() {
+        return true;
     }
 
     public ResultSet GenPull(String query) {
@@ -41,19 +38,34 @@ public class Databases {
             return result;
 
         } catch (SQLException ex) {
+
             return null;
         }
     }
 
-    public void GenPush(String query) {
+    public boolean GenPush(String query) {
         //take a query and push it to database
-        
+
         try {
             Statement statement = conn.createStatement();
             statement.executeUpdate(query);
-            
-        } catch (SQLException ex) {
 
+            System.out.println("Push query made");
+            return true;
+
+        } catch (SQLException ex) {
+            System.out.println("Push query error: " + ex);
+            return false;
+        }
+    }
+
+    public void CloseConnection() {
+        try {
+            conn.close();
+            System.out.println("Connection Closed");
+
+        } catch (SQLException ex) {
+            System.out.println("Connection could not closed. Error: " + ex);
         }
     }
 }
