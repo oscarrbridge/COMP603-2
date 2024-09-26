@@ -10,7 +10,7 @@ public class Main {
     }
 
     private static void CreateDatabases() {
-
+        //Create database schema
         Databases data = new Databases();
 
         String users_table = "CREATE TABLE Users "
