@@ -120,6 +120,11 @@ public class frmLogin extends javax.swing.JFrame {
         if (!CheckLoginInfo()) {
             lblPasswordDisp.setVisible(true);
         }
+        else{
+            frmGamesHome games = new frmGamesHome(id, username, credits);
+            games.show();
+            this.hide();
+        }
 
     }//GEN-LAST:event_btnLoginMouseClicked
 
