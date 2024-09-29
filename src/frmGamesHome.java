@@ -11,7 +11,7 @@ public class frmGamesHome extends javax.swing.JFrame {
         this.id = id;
         this.username = username;
         this.credits = credits;
-        
+
         SetUpPage();
     }
 
@@ -130,14 +130,12 @@ public class frmGamesHome extends javax.swing.JFrame {
     private javax.swing.JLabel lblPlayingAs;
     // End of variables declaration//GEN-END:variables
 
-    private void SetUpPage()
-    {
+    private void SetUpPage() {
         lblPlayingAs.setText("Playing as: " + username);
         ChangeBalanceDisp();
     }
-    
-    private void ChangeBalanceDisp()
-    {
+
+    private void ChangeBalanceDisp() {
         lblCreditsDisp.setText("Your current balance: " + credits + "cr");
     }
 

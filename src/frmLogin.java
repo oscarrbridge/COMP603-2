@@ -13,6 +13,7 @@ public class frmLogin extends javax.swing.JFrame {
         initComponents();
         
         lblPasswordDisp.setVisible(false);
+        
     }
     
     @SuppressWarnings("unchecked")
