@@ -49,6 +49,11 @@ public class frmGamesHome extends javax.swing.JFrame {
         });
 
         btnBlackjack.setText("Blackjack");
+        btnBlackjack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBlackjackMouseClicked(evt);
+            }
+        });
 
         btnSlots.setText("Slots");
 
@@ -118,6 +123,16 @@ public class frmGamesHome extends javax.swing.JFrame {
         //quit the entire program
         System.exit(0);
     }//GEN-LAST:event_btnQuitMouseClicked
+
+    private void btnBlackjackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBlackjackMouseClicked
+        //play blackjack
+        
+        dialogBet bet = new dialogBet(username, credits, this);
+        bet.show();
+        this.setVisible(false);
+        
+        System.out.println(bet.CheckBetPlaced());
+    }//GEN-LAST:event_btnBlackjackMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBlackjack;
