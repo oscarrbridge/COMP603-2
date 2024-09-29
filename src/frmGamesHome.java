@@ -5,6 +5,8 @@ public class frmGamesHome extends javax.swing.JFrame {
     String username;
     int credits;
 
+    int creditBet;
+
     public frmGamesHome(int id, String username, int credits) {
         initComponents();
 
@@ -56,8 +58,18 @@ public class frmGamesHome extends javax.swing.JFrame {
         });
 
         btnSlots.setText("Slots");
+        btnSlots.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnSlotsMouseReleased(evt);
+            }
+        });
 
         btnRoulette.setText("Roulette");
+        btnRoulette.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRouletteMouseClicked(evt);
+            }
+        });
 
         jLabel1.setText("Select A Game To Play");
 
@@ -126,13 +138,31 @@ public class frmGamesHome extends javax.swing.JFrame {
 
     private void btnBlackjackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBlackjackMouseClicked
         //play blackjack
-        
-        dialogBet bet = new dialogBet(username, credits, this);
-        bet.show();
-        this.setVisible(false);
-        
-        System.out.println(bet.CheckBetPlaced());
+
+        if (PlaceBet()) {
+            dialogBlackjack blackjack = new dialogBlackjack(this);
+            blackjack.setVisible(true);
+        }
+
     }//GEN-LAST:event_btnBlackjackMouseClicked
+
+    private void btnSlotsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSlotsMouseReleased
+        //play slots
+
+        if (PlaceBet()) {
+            dialogSlots slots = new dialogSlots(this);
+            slots.setVisible(true);
+        }
+    }//GEN-LAST:event_btnSlotsMouseReleased
+
+    private void btnRouletteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRouletteMouseClicked
+        //play roulette
+
+        if (PlaceBet()) {
+            dialogRoulette roulette = new dialogRoulette(this);
+            roulette.setVisible(true);
+        }
+    }//GEN-LAST:event_btnRouletteMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBlackjack;
@@ -154,4 +184,14 @@ public class frmGamesHome extends javax.swing.JFrame {
         lblCreditsDisp.setText("Your current balance: " + credits + "cr");
     }
 
+    private boolean PlaceBet() {
+        dialogBet bet = new dialogBet(username, credits, this);
+        bet.setVisible(true);
+
+        if (bet.CheckBetPlaced()) {
+            creditBet = bet.GetBet();
+            return true;
+        }
+        return false;
+    }
 }

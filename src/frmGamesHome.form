@@ -119,11 +119,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Slots"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnSlotsMouseReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnRoulette">
       <Properties>
         <Property name="text" type="java.lang.String" value="Roulette"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnRouletteMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>

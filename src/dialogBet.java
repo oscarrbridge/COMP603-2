@@ -7,8 +7,11 @@ public class dialogBet extends javax.swing.JDialog {
     frmGamesHome parent;
 
     boolean canBet = false;
+    int bet;
 
     public dialogBet(String username, int credits, frmGamesHome parent) {
+        super(parent, true);
+
         initComponents();
 
         this.username = username;
@@ -107,13 +110,16 @@ public class dialogBet extends javax.swing.JDialog {
 
     private void btnBetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBetMousePressed
         //try to place the bet
-        boolean valid = CheckForValidBet(Integer.parseInt(txtBet.getText()));
+        int intBet = Integer.parseInt(txtBet.getText());
+
+        boolean valid = CheckForValidBet(intBet);
 
         if (valid) {
             canBet = true;
+            bet = intBet;
 
             parent.setVisible(true);
-            this.setVisible(false);
+            this.dispose();
         }
     }//GEN-LAST:event_btnBetMousePressed
 
@@ -126,6 +132,8 @@ public class dialogBet extends javax.swing.JDialog {
     // End of variables declaration//GEN-END:variables
 
     private void SetUpPage() {
+        parent.setVisible(false);
+
         lblPlayingAs.setText("Playing as: " + username);
         ChangeBalanceDisp();
     }
@@ -140,6 +148,10 @@ public class dialogBet extends javax.swing.JDialog {
 
     public boolean CheckBetPlaced() {
         return canBet;
+    }
+
+    public int GetBet() {
+        return bet;
     }
 
 }
