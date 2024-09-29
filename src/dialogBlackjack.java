@@ -2,11 +2,11 @@
 public class dialogBlackjack extends javax.swing.JDialog {
 
     frmGamesHome parent;
-    
+
     public dialogBlackjack(frmGamesHome parent) {
         super(parent, true);
         initComponents();
-        
+
         this.parent = parent;
     }
 
@@ -32,7 +32,4 @@ public class dialogBlackjack extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
-
-
-
 }
