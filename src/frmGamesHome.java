@@ -5,7 +5,7 @@ public class frmGamesHome extends javax.swing.JFrame {
     String username;
     int credits;
 
-    int creditBet;
+    int creditBet = 0;
 
     public frmGamesHome(int id, String username, int credits) {
         initComponents();
@@ -126,12 +126,16 @@ public class frmGamesHome extends javax.swing.JFrame {
 
     private void btnLogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseClicked
         //close this window and re open login screen
+        UpdateDatabaseCredits();
+
         frmLogin login = new frmLogin();
         login.show();
         this.hide();
     }//GEN-LAST:event_btnLogoutMouseClicked
 
     private void btnQuitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQuitMouseClicked
+        UpdateDatabaseCredits();
+
         //quit the entire program
         System.exit(0);
     }//GEN-LAST:event_btnQuitMouseClicked
@@ -142,8 +146,10 @@ public class frmGamesHome extends javax.swing.JFrame {
         if (PlaceBet()) {
             dialogBlackjack blackjack = new dialogBlackjack(this);
             blackjack.setVisible(true);
-        }
 
+            ChangeCredits(blackjack.GetStatus());
+        }
+        ChangeBalanceDisp();
     }//GEN-LAST:event_btnBlackjackMouseClicked
 
     private void btnSlotsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSlotsMouseReleased
@@ -175,6 +181,16 @@ public class frmGamesHome extends javax.swing.JFrame {
     private javax.swing.JLabel lblPlayingAs;
     // End of variables declaration//GEN-END:variables
 
+    private void UpdateDatabaseCredits() {
+        Databases data = new Databases();
+
+        String query = "UPDATE USERS"
+                + " SET CREDITS = " + credits
+                + " WHERE ID = " + id;
+
+        data.GenPush(query);
+    }
+
     private void SetUpPage() {
         lblPlayingAs.setText("Playing as: " + username);
         ChangeBalanceDisp();
@@ -193,5 +209,13 @@ public class frmGamesHome extends javax.swing.JFrame {
             return true;
         }
         return false;
+    }
+
+    private void ChangeCredits(boolean status) {
+        if (status) {
+            credits += (creditBet * 2);
+        } else {
+            credits -= creditBet;
+        }
     }
 }
