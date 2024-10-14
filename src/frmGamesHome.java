@@ -59,8 +59,8 @@ public class frmGamesHome extends javax.swing.JFrame {
 
         btnSlots.setText("Slots");
         btnSlots.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnSlotsMouseReleased(evt);
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnSlotsMousePressed(evt);
             }
         });
 
@@ -81,11 +81,10 @@ public class frmGamesHome extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnQuit)
+                    .addComponent(btnLogout)
                     .addComponent(lblPlayingAs)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCreditsDisp)
-                            .addComponent(btnLogout))
+                        .addComponent(lblCreditsDisp)
                         .addGap(57, 57, 57)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
@@ -101,24 +100,21 @@ public class frmGamesHome extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(lblPlayingAs)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblCreditsDisp)
-                        .addGap(126, 126, 126)
-                        .addComponent(btnLogout))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnBlackjack)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSlots)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRoulette)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblCreditsDisp)
+                .addGap(23, 23, 23)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnBlackjack)
+                .addGap(18, 18, 18)
+                .addComponent(btnSlots)
+                .addGap(18, 18, 18)
+                .addComponent(btnRoulette)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(btnLogout)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnQuit)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -152,15 +148,6 @@ public class frmGamesHome extends javax.swing.JFrame {
         ChangeBalanceDisp();
     }//GEN-LAST:event_btnBlackjackMouseClicked
 
-    private void btnSlotsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSlotsMouseReleased
-        //play slots
-
-        if (PlaceBet()) {
-            dialogSlots slots = new dialogSlots(this);
-            slots.setVisible(true);
-        }
-    }//GEN-LAST:event_btnSlotsMouseReleased
-
     private void btnRouletteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRouletteMouseClicked
         //play roulette
 
@@ -169,6 +156,19 @@ public class frmGamesHome extends javax.swing.JFrame {
             roulette.setVisible(true);
         }
     }//GEN-LAST:event_btnRouletteMouseClicked
+
+    private void btnSlotsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSlotsMousePressed
+        //play slots
+
+        if (PlaceBet()) {
+            dialogSlots slots = new dialogSlots(this, credits, creditBet);
+            slots.setVisible(true);
+
+            credits = slots.GetNewBalance();
+        }
+
+        ChangeBalanceDisp();
+    }//GEN-LAST:event_btnSlotsMousePressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBlackjack;
