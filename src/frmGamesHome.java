@@ -38,7 +38,7 @@ public class frmGamesHome extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(750, 400));
 
-        jPanel1.setBackground(new java.awt.Color(206, 196, 147));
+        jPanel1.setBackground(new java.awt.Color(198, 198, 198));
 
         lblCreditsDisp.setFont(new java.awt.Font("Barlow", 1, 14)); // NOI18N
         lblCreditsDisp.setText("Your current balance: ");
@@ -127,7 +127,7 @@ public class frmGamesHome extends javax.swing.JFrame {
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(206, 196, 147));
+        jPanel3.setBackground(new java.awt.Color(198, 198, 198));
 
         btnLogout.setText("Logout");
         btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {

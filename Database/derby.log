@@ -1,7 +1,7 @@
-Mon Oct 14 13:45:09 NZDT 2024 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+Wed Oct 16 16:16:38 NZDT 2024 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Mon Oct 14 13:45:10 NZDT 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-887c-7170-ffff8c14b72a 
+Wed Oct 16 16:16:38 NZDT 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-9353-d800-ffff8c14b72a 
 on database directory C:\Users\Oscar\OneDrive\Documents\GitHub\COMP603-2\Database\COMP607-Casino with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09 
 Loaded from file:/C:/Users/Oscar/OneDrive/Documents/GitHub/COMP603-2/db-derby-10.14.2.0-bin/lib/derby.jar
 java.vendor=Oracle Corporation
