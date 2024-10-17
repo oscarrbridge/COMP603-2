@@ -39,8 +39,10 @@ public class dialogBet extends javax.swing.JDialog {
 
         jPanel1.setBackground(new java.awt.Color(198, 198, 198));
 
+        lblPlayingAs.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         lblPlayingAs.setText("Playing as: ");
 
+        lblCreditsDisp.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         lblCreditsDisp.setText("Your current balance: ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -66,6 +68,7 @@ public class dialogBet extends javax.swing.JDialog {
 
         jPanel2.setBackground(new java.awt.Color(18, 51, 106));
 
+        lblBet.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         lblBet.setForeground(new java.awt.Color(255, 255, 255));
         lblBet.setText("Place your bet");
 
@@ -88,26 +91,27 @@ public class dialogBet extends javax.swing.JDialog {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblBet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnBet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(132, Short.MAX_VALUE)
-                .addComponent(txtBet, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(130, 130, 130))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnBet, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblBet)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addComponent(txtBet, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(lblBet)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnBet)
                 .addGap(18, 18, 18)
                 .addComponent(txtBet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnBet)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

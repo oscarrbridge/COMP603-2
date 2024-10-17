@@ -84,11 +84,17 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblPlayingAs">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Playing as: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblCreditsDisp">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Your current balance: "/>
           </Properties>
         </Component>
@@ -104,18 +110,21 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblBet" max="32767" attributes="0"/>
-                      <Component id="btnBet" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btnBet" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="lblBet" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                          <Component id="txtBet" min="-2" pref="146" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="132" max="32767" attributes="0"/>
-                  <Component id="txtBet" min="-2" pref="146" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                  <EmptySpace pref="124" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -124,11 +133,11 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="lblBet" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btnBet" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="txtBet" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="96" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btnBet" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="74" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -136,6 +145,9 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblBet">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="24" style="1"/>
+            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
