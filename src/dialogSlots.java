@@ -71,6 +71,10 @@ public class dialogSlots extends javax.swing.JDialog {
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(lblRow3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(86, Short.MAX_VALUE)
+                .addComponent(lblBalanceWarning)
+                .addGap(74, 74, 74))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -80,13 +84,9 @@ public class dialogSlots extends javax.swing.JDialog {
                         .addContainerGap()
                         .addComponent(lblCurrentBet))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(211, 211, 211)
+                        .addGap(224, 224, 224)
                         .addComponent(btnSpin)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
-                .addComponent(lblBalanceWarning)
-                .addGap(74, 74, 74))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,9 +102,9 @@ public class dialogSlots extends javax.swing.JDialog {
                     .addComponent(lblRow1)
                     .addComponent(lblRow2)
                     .addComponent(lblRow3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGap(35, 35, 35)
                 .addComponent(btnSpin)
-                .addGap(36, 36, 36))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
