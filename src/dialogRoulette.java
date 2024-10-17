@@ -1,7 +1,7 @@
 
 public class dialogRoulette extends javax.swing.JDialog {
 
-    frmGamesHome parent;
+    frmGamesHome parent; // Test
 
     public dialogRoulette(frmGamesHome parent) {
         super(parent, true);
