@@ -8,14 +8,14 @@ import java.sql.Statement;
 public class Databases {
 
     public static Connection conn;
-    public static String url = "jdbc:derby://localhost:1527/COMP607-Casino";
-    public static String username = "COMP607";
-    public static String password = "1234";
+    public static String url = "jdbc:derby:COMP607-Casino;create=true";
+    //Username: COMP607
+    //Password: 1234
 
     Databases() {
         //create connection to database
         try {
-            conn = DriverManager.getConnection(url, username, password);
+            conn = DriverManager.getConnection(url);
             System.out.println("Connection Created");
 
         } catch (SQLException ex) {
