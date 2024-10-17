@@ -15,7 +15,7 @@ public class Databases {
     Databases() {
         //create connection to database
         try {
-            conn = DriverManager.getConnection(url);
+            conn = DriverManager.getConnection(url  );
             System.out.println("Connection Created");
 
         } catch (SQLException ex) {
