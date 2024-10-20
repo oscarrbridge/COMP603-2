@@ -11,6 +11,7 @@ public class Card {
 
     @Override
     public String toString() {
+        //Return a formatted string of the cards rank and suit
         return this.rank + "of" + this.suit;
     }
 }

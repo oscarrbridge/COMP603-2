@@ -13,22 +13,19 @@ public class Databases {
     //Password: 1234
 
     Databases() {
-        //create connection to database
+        //Create connection to database
         try {
-            conn = DriverManager.getConnection(url  );
+            conn = DriverManager.getConnection(url);
             System.out.println("Connection Created");
 
         } catch (SQLException ex) {
+            //Catch connection error
             System.out.println("Connection could not be made. Error: " + ex);
         }
     }
 
-    public boolean CreateConnection() {
-        return true;
-    }
-
     public ResultSet GenPull(String query) {
-        //take a query and returne result
+        //Take a query and return result
         try {
             ResultSet result;
 
@@ -38,14 +35,13 @@ public class Databases {
             return result;
 
         } catch (SQLException ex) {
-
+            //Catch any errors
             return null;
         }
     }
 
     public boolean GenPush(String query) {
-        //take a query and push it to database
-
+        //Take a query and push it to database
         try {
             Statement statement = conn.createStatement();
             statement.executeUpdate(query);
@@ -54,12 +50,14 @@ public class Databases {
             return true;
 
         } catch (SQLException ex) {
+            //Catch any errors
             System.out.println("Push query error: " + ex);
             return false;
         }
     }
 
     public void CloseConnection() {
+        //Close the database connection
         try {
             conn.close();
             System.out.println("Connection Closed");
