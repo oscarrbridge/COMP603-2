@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Fri Oct 18 10:31:20 NZDT 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-9c64-6d14-00001eaef240 
-on database directory /home/Duck/Documents/GitHub/COMP603-2/COMP607-Casino with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@de0a01f 
-Loaded from file:/home/Duck/Documents/GitHub/COMP603-2/lib/derby.jar
-java.vendor=Arch Linux
-java.runtime.version=11.0.24+8
-user.dir=/home/Duck/Documents/GitHub/COMP603-2
-os.name=Linux
+Mon Oct 21 14:11:47 NZDT 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-aca1-55e8-00001f706a88 
+on database directory C:\Users\Oscar\OneDrive\Documents\GitHub\COMP603-2\COMP607-Casino with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4f4a7090 
+Loaded from file:/C:/Users/Oscar/OneDrive/Documents/GitHub/COMP603-2/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.23+7-LTS-222
+user.dir=C:\Users\Oscar\OneDrive\Documents\GitHub\COMP603-2
+os.name=Windows 11
 os.arch=amd64
-os.version=6.11.1-arch1-1
+os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

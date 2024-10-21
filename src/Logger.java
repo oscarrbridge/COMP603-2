@@ -10,11 +10,13 @@
 public class Logger {
 
     public void AddLog(int id, String log) {
+        //Add a log to the database
         Databases data = new Databases();
 
         String query = "INSERT INTO LOGS (user_id, log) "
                 + "VALUES (" + id + ", '" + log + "')";
 
+        //Push the log
         data.GenPush(query);
         data.CloseConnection();
     }

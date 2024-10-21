@@ -139,8 +139,7 @@ public class dialogBet extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtBetKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBetKeyTyped
-        //check that the value entered is an int
-
+        //Check that the character entered is an int
         char input = evt.getKeyChar();
         if (!Character.isDigit(input)) {
             evt.consume();
@@ -148,10 +147,10 @@ public class dialogBet extends javax.swing.JDialog {
     }//GEN-LAST:event_txtBetKeyTyped
 
     private void btnBetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBetMousePressed
-        //try to place the bet
+        //Try to place the bet
         int intBet = Integer.parseInt(txtBet.getText());
 
-        boolean valid = CheckForValidBet(intBet);
+        boolean valid = CheckForValidBet(intBet, credits);
 
         if (valid) {
             canBet = true;
@@ -180,18 +179,22 @@ public class dialogBet extends javax.swing.JDialog {
     }
 
     private void ChangeBalanceDisp() {
+        //Change the balance display text
         lblCreditsDisp.setText("Your current balance: " + credits + "cr");
     }
 
-    private boolean CheckForValidBet(int bet) {
-        return credits >= bet;
+    boolean CheckForValidBet(int bet, int playerCredits) {
+        //Check that the bet made it valid
+        return playerCredits >= bet;
     }
 
     public boolean CheckBetPlaced() {
+        //Check that a valid bet has been made
         return canBet;
     }
 
     public int GetBet() {
+        //Get the value of the bet made
         return bet;
     }
 

@@ -8,12 +8,17 @@ public class dialogBlackjack extends javax.swing.JDialog {
 
     Deck deck = new Deck();
 
+    //Create an empty hand for the player
     List<Card> playersHand = new ArrayList<>();
+    //Create an empty hand for the dealer
     List<Card> dealersHand = new ArrayList<>();
 
+    //Sum of the players hand
     int playerSum = 0;
+    //Sum of the dealers hand
     int dealerSum = 0;
 
+    //Player win status
     boolean status = false;
 
     public dialogBlackjack(frmGamesHome parent) {
@@ -157,18 +162,21 @@ public class dialogBlackjack extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHitMousePressed
+        //Deal the player a card
         playersHand.add(deck.dealCard());
 
         playerSum = HandSum(playersHand);
 
         UpdateTotals(playerSum, dealerSum);
 
+        //Check the players sum
         if (playerSum > 21) {
             GoBust();
         }
     }//GEN-LAST:event_btnHitMousePressed
 
     private void btnStandMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStandMousePressed
+        //Start dealing the dealers cards
         while (dealerSum < 21) {
             dealersHand.add(deck.dealCard());
 
@@ -176,7 +184,6 @@ public class dialogBlackjack extends javax.swing.JDialog {
 
             UpdateTotals(playerSum, dealerSum);
 
-            //sleep here
             if (dealerSum > playerSum && dealerSum <= 21) {
                 DealerWin();
                 return;
@@ -186,6 +193,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
     }//GEN-LAST:event_btnStandMousePressed
 
     private void btnExitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMousePressed
+        //Exit blackjack
         this.hide();
     }//GEN-LAST:event_btnExitMousePressed
 
@@ -202,6 +210,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
 
     private void StartGame() {
 
+        //Add two cards to the players hand to start the game
         playersHand.add(deck.dealCard());
         playersHand.add(deck.dealCard());
 
@@ -212,6 +221,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
     }
 
     private void DealerWin() {
+       //Dealer won
         btnHit.hide();
         btnStand.hide();
 
@@ -222,6 +232,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
     }
 
     private void WinGame() {
+        //Player won
         btnHit.hide();
         btnStand.hide();
 
@@ -234,6 +245,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
     }
 
     private void GoBust() {
+        //Player goes bust
         btnHit.hide();
         btnStand.hide();
         lblDealerTotal.hide();
@@ -246,13 +258,16 @@ public class dialogBlackjack extends javax.swing.JDialog {
     }
 
     private void UpdateTotals(int player, int dealer) {
+        //Update the players hand total
         lblPlayerTotal.setText("Your Total: " + player);
+        //Update the dealers hand total
         lblDealerTotal.setText("Dealer Total: " + dealer);
 
     }
 
     private int HandSum(List<Card> hand) {
-
+        //Count the sum of the hand given
+        
         int handVal = 0;
         int rankVal;
 
@@ -268,6 +283,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
     }
 
     boolean GetStatus() {
+        //Return if the player has won
         return status;
     }
 }
