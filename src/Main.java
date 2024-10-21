@@ -5,6 +5,7 @@ public class Main {
 
         CreateDatabases();
 
+        //Open the login page
         frmLogin login = new frmLogin();
         login.show();
     }

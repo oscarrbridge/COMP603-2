@@ -25,24 +25,47 @@ public class dialogSlots extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        lblCreditsDisp = new javax.swing.JLabel();
+        lblCurrentBet = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        btnSpin = new javax.swing.JButton();
         lblRow1 = new javax.swing.JLabel();
         lblRow2 = new javax.swing.JLabel();
         lblRow3 = new javax.swing.JLabel();
-        btnSpin = new javax.swing.JButton();
-        lblCreditsDisp = new javax.swing.JLabel();
-        lblCurrentBet = new javax.swing.JLabel();
         lblBalanceWarning = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        lblRow1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        lblRow1.setText("-");
+        jPanel1.setBackground(new java.awt.Color(198, 198, 198));
 
-        lblRow2.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        lblRow2.setText("-");
+        lblCreditsDisp.setText("Credits");
 
-        lblRow3.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        lblRow3.setText("-");
+        lblCurrentBet.setText("Bet");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblCreditsDisp)
+                    .addComponent(lblCurrentBet))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblCreditsDisp)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblCurrentBet)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(18, 51, 106));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         btnSpin.setText("Spin");
         btnSpin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -51,60 +74,78 @@ public class dialogSlots extends javax.swing.JDialog {
             }
         });
 
-        lblCreditsDisp.setText("Credits");
+        lblRow1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        lblRow1.setForeground(new java.awt.Color(255, 255, 255));
+        lblRow1.setText("-");
 
-        lblCurrentBet.setText("Bet");
+        lblRow2.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        lblRow2.setForeground(new java.awt.Color(255, 255, 255));
+        lblRow2.setText("-");
+
+        lblRow3.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        lblRow3.setForeground(new java.awt.Color(255, 255, 255));
+        lblRow3.setText("-");
 
         lblBalanceWarning.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblBalanceWarning.setForeground(new java.awt.Color(255, 0, 51));
         lblBalanceWarning.setText("Your balance is too low to make this bet");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(btnSpin)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(75, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lblRow1)
+                        .addGap(170, 170, 170)
+                        .addComponent(lblRow2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblRow3))
+                    .addComponent(lblBalanceWarning))
+                .addGap(73, 73, 73))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(lblBalanceWarning)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRow1)
+                    .addComponent(lblRow2)
+                    .addComponent(lblRow3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(btnSpin)
+                .addGap(37, 37, 37))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblRow1)
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(lblRow2)
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(lblRow3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblCreditsDisp))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblCurrentBet))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(211, 211, 211)
-                        .addComponent(btnSpin)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
-                .addComponent(lblBalanceWarning)
-                .addGap(74, 74, 74))
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblCreditsDisp)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblCurrentBet)
-                .addGap(27, 27, 27)
-                .addComponent(lblBalanceWarning)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblRow1)
-                    .addComponent(lblRow2)
-                    .addComponent(lblRow3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(btnSpin)
-                .addGap(36, 36, 36))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -128,6 +169,8 @@ public class dialogSlots extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSpin;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblBalanceWarning;
     private javax.swing.JLabel lblCreditsDisp;
     private javax.swing.JLabel lblCurrentBet;
