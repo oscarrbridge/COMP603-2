@@ -17,10 +17,12 @@ import java.util.Random;
 public class Wheel {
 
     private final Random random;
+    int betMultiplier;
 
     public Wheel()
     {
         this.random = new Random();
+        this.betMultiplier = betMultiplier;
     }
 
     public ArrayList board()  
