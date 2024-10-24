@@ -6,6 +6,8 @@ public class frmGamesHome extends javax.swing.JFrame {
     int credits;
 
     int creditBet = 0;
+    
+    Logger log;
 
     public frmGamesHome(int id, String username, int credits) {
         initComponents();
@@ -15,6 +17,9 @@ public class frmGamesHome extends javax.swing.JFrame {
         this.credits = credits;
 
         SetUpPage();
+
+        log = new Logger(id);
+
     }
 
     @SuppressWarnings("unchecked")
@@ -32,6 +37,7 @@ public class frmGamesHome extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         btnLogout = new javax.swing.JButton();
         btnQuit = new javax.swing.JButton();
+        btnViewLog = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(750, 400));
@@ -143,6 +149,13 @@ public class frmGamesHome extends javax.swing.JFrame {
             }
         });
 
+        btnViewLog.setText("View Log");
+        btnViewLog.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnViewLogMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -150,9 +163,14 @@ public class frmGamesHome extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLogout)
-                    .addComponent(btnQuit))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(btnLogout)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(btnQuit)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnViewLog)))
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,7 +178,9 @@ public class frmGamesHome extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnLogout)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                .addComponent(btnQuit)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnQuit)
+                    .addComponent(btnViewLog))
                 .addContainerGap())
         );
 
@@ -193,6 +213,8 @@ public class frmGamesHome extends javax.swing.JFrame {
 
     private void btnLogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseClicked
         //close this window and re open login screen
+        log.AddLog("User Logged Out");
+
         UpdateDatabaseCredits();
 
         frmLogin login = new frmLogin();
@@ -201,6 +223,8 @@ public class frmGamesHome extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogoutMouseClicked
 
     private void btnQuitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQuitMouseClicked
+        log.AddLog("User Quit The App");
+
         UpdateDatabaseCredits();
 
         //quit the entire program
@@ -209,6 +233,7 @@ public class frmGamesHome extends javax.swing.JFrame {
 
     private void btnBlackjackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBlackjackMouseClicked
         //play blackjack
+        log.AddLog("User Started Blackjack");
 
         if (PlaceBet()) {
             dialogBlackjack blackjack = new dialogBlackjack(this);
@@ -221,7 +246,7 @@ public class frmGamesHome extends javax.swing.JFrame {
 
     private void btnRouletteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRouletteMouseClicked
         //play roulette
-
+        log.AddLog("User Started Roulette");
         if (PlaceBet()) {
             dialogRoulette roulette = new dialogRoulette(this);
             roulette.setVisible(true);
@@ -234,6 +259,7 @@ public class frmGamesHome extends javax.swing.JFrame {
 
     private void btnSlotsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSlotsMousePressed
         //play slots
+        log.AddLog("User Started Slots");
 
         if (PlaceBet()) {
             dialogSlots slots = new dialogSlots(this, credits, creditBet);
@@ -245,12 +271,17 @@ public class frmGamesHome extends javax.swing.JFrame {
         ChangeBalanceDisp();
     }//GEN-LAST:event_btnSlotsMousePressed
 
+    private void btnViewLogMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewLogMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnViewLogMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBlackjack;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnQuit;
     private javax.swing.JButton btnRoulette;
     private javax.swing.JButton btnSlots;
+    private javax.swing.JButton btnViewLog;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

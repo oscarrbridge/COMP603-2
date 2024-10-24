@@ -9,7 +9,14 @@
  */
 public class Logger {
 
-    public void AddLog(int id, String log) {
+    int id;
+    
+    Logger(int id)
+    {
+        this.id = id;
+    }
+    
+    public void AddLog(String log) {
         //Add a log to the database
         Databases data = new Databases();
 

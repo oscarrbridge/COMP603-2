@@ -1,14 +1,14 @@
-Fri Oct 18 10:11:18 NZDT 2024 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+Fri Oct 25 12:32:57 NZDT 2024 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Fri Oct 18 10:11:18 NZDT 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-9c52-154b-00002825f35b 
-on database directory /home/Duck/Documents/GitHub/COMP603-2/Database/COMP607-Casino with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902 
-Loaded from file:/home/Duck/Documents/GitHub/COMP603-2/db-derby-10.14.2.0-bin/lib/derby.jar
-java.vendor=Arch Linux
-java.runtime.version=11.0.24+8
-user.dir=/home/Duck/Documents/GitHub/COMP603-2/db-derby-10.14.2.0-bin
-os.name=Linux
+Fri Oct 25 12:32:57 NZDT 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-c0e0-4aa5-ffff8c14b72a 
+on database directory C:\Users\Oscar\OneDrive\Documents\GitHub\COMP603-2\Database\COMP607-Casino with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09 
+Loaded from file:/C:/Users/Oscar/OneDrive/Documents/GitHub/COMP603-2/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.23+7-LTS-222
+user.dir=C:\Users\Oscar\OneDrive\Documents\GitHub\COMP603-2\db-derby-10.14.2.0-bin
+os.name=Windows 11
 os.arch=amd64
-os.version=6.11.1-arch1-1
-derby.system.home=/home/Duck/Documents/GitHub/COMP603-2/Database
+os.version=10.0
+derby.system.home=C:\Users\Oscar\OneDrive\Documents\GitHub\COMP603-2\Database
 Database Class Loader started - derby.database.classpath=''
