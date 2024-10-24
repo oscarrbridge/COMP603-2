@@ -19,6 +19,8 @@ public class dialogBet extends javax.swing.JDialog {
 
         this.parent = parent;
 
+        lblError.hide();
+
         SetUpPage();
     }
 
@@ -33,6 +35,7 @@ public class dialogBet extends javax.swing.JDialog {
         lblBet = new javax.swing.JLabel();
         txtBet = new javax.swing.JTextField();
         btnBet = new javax.swing.JButton();
+        lblError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(18, 51, 106));
@@ -86,6 +89,11 @@ public class dialogBet extends javax.swing.JDialog {
             }
         });
 
+        lblError.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblError.setForeground(new java.awt.Color(255, 51, 51));
+        lblError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblError.setText("jLabel1");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -99,7 +107,10 @@ public class dialogBet extends javax.swing.JDialog {
                             .addComponent(lblBet)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(128, 128, 128)
-                        .addComponent(txtBet, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtBet, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(173, 173, 173)
+                        .addComponent(lblError)))
                 .addContainerGap(124, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -111,7 +122,9 @@ public class dialogBet extends javax.swing.JDialog {
                 .addComponent(txtBet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnBet)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(lblError)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -144,6 +157,11 @@ public class dialogBet extends javax.swing.JDialog {
         if (!Character.isDigit(input)) {
             evt.consume();
         }
+        if (txtBet.getText().length() > 10) {
+            evt.consume();
+            ShowError();
+
+        }
     }//GEN-LAST:event_txtBetKeyTyped
 
     private void btnBetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBetMousePressed
@@ -158,6 +176,8 @@ public class dialogBet extends javax.swing.JDialog {
 
             parent.setVisible(true);
             this.dispose();
+        } else {
+            ShowError();
         }
     }//GEN-LAST:event_btnBetMousePressed
 
@@ -167,6 +187,7 @@ public class dialogBet extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblBet;
     private javax.swing.JLabel lblCreditsDisp;
+    private javax.swing.JLabel lblError;
     private javax.swing.JLabel lblPlayingAs;
     private javax.swing.JTextField txtBet;
     // End of variables declaration//GEN-END:variables
@@ -196,6 +217,11 @@ public class dialogBet extends javax.swing.JDialog {
     public int GetBet() {
         //Get the value of the bet made
         return bet;
+    }
+
+    private void ShowError() {
+        lblError.show();
+        lblError.setText("Your bet is too large!");
     }
 
 }

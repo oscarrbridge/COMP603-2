@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Fri Oct 25 12:17:51 NZDT 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-c0d2-77c5-00001f705000 
+Fri Oct 25 12:26:44 NZDT 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-c0da-9703-00001f705000 
 on database directory C:\Users\Oscar\OneDrive\Documents\GitHub\COMP603-2\COMP607-Casino with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4f4a7090 
 Loaded from file:/C:/Users/Oscar/OneDrive/Documents/GitHub/COMP603-2/lib/derby.jar
 java.vendor=Oracle Corporation
