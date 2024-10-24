@@ -214,7 +214,7 @@ public class frmGamesHome extends javax.swing.JFrame {
             dialogBlackjack blackjack = new dialogBlackjack(this);
             blackjack.setVisible(true);
 
-            ChangeCredits(blackjack.GetStatus());
+            ChangeCreditsBlackjack(blackjack.GetStatus());
         }
         ChangeBalanceDisp();
     }//GEN-LAST:event_btnBlackjackMouseClicked
@@ -225,7 +225,11 @@ public class frmGamesHome extends javax.swing.JFrame {
         if (PlaceBet()) {
             dialogRoulette roulette = new dialogRoulette(this);
             roulette.setVisible(true);
+
+            ChangeCreditsRoulette(roulette.GetStatus(), roulette.GetMultiplier());
         }
+        ChangeBalanceDisp();
+
     }//GEN-LAST:event_btnRouletteMouseClicked
 
     private void btnSlotsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSlotsMousePressed
@@ -285,9 +289,17 @@ public class frmGamesHome extends javax.swing.JFrame {
         return false;
     }
 
-    private void ChangeCredits(boolean status) {
+    private void ChangeCreditsBlackjack(boolean status) {
         if (status) {
             credits += (creditBet * 2);
+        } else {
+            credits -= creditBet;
+        }
+    }
+
+    private void ChangeCreditsRoulette(boolean status, int multiplier) {
+        if (status) {
+            credits += (creditBet * multiplier);
         } else {
             credits -= creditBet;
         }

@@ -16,6 +16,8 @@ public class dialogRoulette extends javax.swing.JDialog {
     ArrayList board = wheel.board();
     int n ;
     String s;
+    
+    boolean status = false;
 
     public dialogRoulette(frmGamesHome parent) {
         super(parent, true);
@@ -412,5 +414,15 @@ public class dialogRoulette extends javax.swing.JDialog {
        ResultText.setText("You Lose!");
        NumberText.setText("Number Spun: "+n);
        ColourText.setText("Colour Spun: "+s);
+   }
+   
+   boolean GetStatus()
+   {
+       return status;
+   }
+   
+   int GetMultiplier()
+   {
+       return wheel.betMultiplier;
    }
 }

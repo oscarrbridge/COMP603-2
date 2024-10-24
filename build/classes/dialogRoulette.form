@@ -105,9 +105,6 @@
     <Component class="javax.swing.JButton" name="FirstThirdSelected">
       <Properties>
         <Property name="text" type="java.lang.String" value="1-12"/>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[-32699, -32543, 80, 25]"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FirstThirdSelectedMousePressed"/>
@@ -116,9 +113,6 @@
     <Component class="javax.swing.JButton" name="SecondThirdSelected">
       <Properties>
         <Property name="text" type="java.lang.String" value="13-24"/>
-        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
-          <Point value="[-32610, -32542]"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="SecondThirdSelectedMousePressed"/>
@@ -127,9 +121,6 @@
     <Component class="javax.swing.JButton" name="ThirdThirdSelected">
       <Properties>
         <Property name="text" type="java.lang.String" value="25-36"/>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[-32531, -32542, 80, 25]"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ThirdThirdSelectedMousePressed"/>
@@ -138,9 +129,6 @@
     <Component class="javax.swing.JButton" name="BlacksSelected">
       <Properties>
         <Property name="text" type="java.lang.String" value="Blacks"/>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[-32749, -32507, 80, 25]"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BlacksSelectedMousePressed"/>
@@ -149,9 +137,6 @@
     <Component class="javax.swing.JButton" name="RedsSelected">
       <Properties>
         <Property name="text" type="java.lang.String" value="Reds"/>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[-32653, -32507, 80, 25]"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="RedsSelectedMousePressed"/>
@@ -160,9 +145,6 @@
     <Component class="javax.swing.JButton" name="FirstHalfSelected">
       <Properties>
         <Property name="text" type="java.lang.String" value="1-18"/>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[-32557, -32507, 80, 25]"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FirstHalfSelectedMousePressed"/>
@@ -171,9 +153,6 @@
     <Component class="javax.swing.JButton" name="SecondHalfSelected">
       <Properties>
         <Property name="text" type="java.lang.String" value="19-36"/>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[-32461, -32507, 80, 25]"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="SecondHalfSelectedMousePressed"/>
@@ -182,9 +161,6 @@
     <Component class="javax.swing.JButton" name="QuitSelected">
       <Properties>
         <Property name="text" type="java.lang.String" value="Quit"/>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[-32749, -32749, 80, 25]"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="QuitSelectedMousePressed"/>
@@ -193,9 +169,6 @@
     <Component class="javax.swing.JButton" name="ExitSelected">
       <Properties>
         <Property name="text" type="java.lang.String" value="Exit"/>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[-32617, -32581, 80, 25]"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ExitSelectedMousePressed"/>
