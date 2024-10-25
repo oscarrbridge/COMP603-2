@@ -32,7 +32,7 @@ public class TestSlots {
 
     @Test
     public void testCheckWin_Loss() {
-        //Check that win conditions accept correctly
+        //Check that loss conditions accept correctly
         dialogSlots slots = new dialogSlots(1000, 100);
 
         slots.lblRow1.setText("🍒");

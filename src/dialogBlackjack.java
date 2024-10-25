@@ -215,7 +215,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
 
     }
 
-    private void DealerWin() {
+    public void DealerWin() {
        //Dealer won
         btnHit.hide();
         btnStand.hide();
@@ -226,7 +226,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
         btnExit.show();
     }
 
-    private void WinGame() {
+    public void WinGame() {
         //Player won
         btnHit.hide();
         btnStand.hide();
@@ -239,7 +239,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
         status = true;
     }
 
-    private void GoBust() {
+    public void GoBust() {
         //Player goes bust
         btnHit.hide();
         btnStand.hide();
