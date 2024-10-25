@@ -14,6 +14,7 @@ public class Wheel{
     public Wheel()
     {
         this.random = new Random();
+        this.betMultiplier = betMultiplier;
     }
 
     public ArrayList board()  
