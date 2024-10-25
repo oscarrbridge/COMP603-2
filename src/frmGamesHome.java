@@ -262,7 +262,7 @@ public class frmGamesHome extends javax.swing.JFrame {
         log.AddLog("User Started Slots");
 
         if (PlaceBet()) {
-            dialogSlots slots = new dialogSlots(this, credits, creditBet);
+            dialogSlots slots = new dialogSlots(credits, creditBet);
             slots.setVisible(true);
 
             credits = slots.GetNewBalance();
