@@ -394,6 +394,8 @@ public class dialogRoulette extends javax.swing.JDialog {
        ResultText.setText("You Win!");
        NumberText.setText("Number Spun: "+n);
        ColourText.setText("Colour Spun: "+s);
+       
+       status = true;
    }
    
    private void rouletteLose()

@@ -3,15 +3,14 @@ import java.util.Random;
 
 public class dialogSlots extends javax.swing.JDialog {
 
-    frmGamesHome parent;
     int credits;
     int creditBet;
 
-    public dialogSlots(frmGamesHome parent, int credits, int creditBet) {
-        super(parent, true);
+    public dialogSlots(int credits, int creditBet) {
         initComponents();
 
-        this.parent = parent;
+        setModal(true);
+
         this.credits = credits;
         this.creditBet = creditBet;
 
@@ -174,12 +173,12 @@ public class dialogSlots extends javax.swing.JDialog {
     private javax.swing.JLabel lblBalanceWarning;
     private javax.swing.JLabel lblCreditsDisp;
     private javax.swing.JLabel lblCurrentBet;
-    private javax.swing.JLabel lblRow1;
-    private javax.swing.JLabel lblRow2;
-    private javax.swing.JLabel lblRow3;
+    public javax.swing.JLabel lblRow1;
+    public javax.swing.JLabel lblRow2;
+    public javax.swing.JLabel lblRow3;
     // End of variables declaration//GEN-END:variables
 
-    private boolean CheckValidBet() {
+    public boolean CheckValidBet() {
         return creditBet <= credits;
     }
 
@@ -201,16 +200,15 @@ public class dialogSlots extends javax.swing.JDialog {
         return choices[i];
     }
 
-    private boolean CheckForWin() {
+    public boolean CheckForWin() {
         return lblRow1.getText().equals(lblRow2.getText()) && lblRow2.getText().equals(lblRow3.getText());
     }
 
     private void ChangeBalanceDisp() {
         lblCreditsDisp.setText("Your current balance: " + credits + "cr");
     }
-    
-    int GetNewBalance()
-    {
+
+    int GetNewBalance() {
         return credits;
     }
 }

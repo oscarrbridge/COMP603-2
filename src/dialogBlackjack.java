@@ -4,8 +4,6 @@ import java.util.List;
 
 public class dialogBlackjack extends javax.swing.JDialog {
 
-    frmGamesHome parent;
-
     Deck deck = new Deck();
 
     //Create an empty hand for the player
@@ -21,11 +19,8 @@ public class dialogBlackjack extends javax.swing.JDialog {
     //Player win status
     boolean status = false;
 
-    public dialogBlackjack(frmGamesHome parent) {
-        super(parent, true);
+    public dialogBlackjack() {
         initComponents();
-
-        this.parent = parent;
 
         lblStatus.hide();
         btnExit.hide();
@@ -220,7 +215,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
 
     }
 
-    private void DealerWin() {
+    public void DealerWin() {
        //Dealer won
         btnHit.hide();
         btnStand.hide();
@@ -231,7 +226,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
         btnExit.show();
     }
 
-    private void WinGame() {
+    public void WinGame() {
         //Player won
         btnHit.hide();
         btnStand.hide();
@@ -244,7 +239,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
         status = true;
     }
 
-    private void GoBust() {
+    public void GoBust() {
         //Player goes bust
         btnHit.hide();
         btnStand.hide();
