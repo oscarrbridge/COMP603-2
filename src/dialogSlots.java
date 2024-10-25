@@ -9,6 +9,8 @@ public class dialogSlots extends javax.swing.JDialog {
     public dialogSlots(int credits, int creditBet) {
         initComponents();
 
+        setModal(true);
+
         this.credits = credits;
         this.creditBet = creditBet;
 
@@ -205,9 +207,8 @@ public class dialogSlots extends javax.swing.JDialog {
     private void ChangeBalanceDisp() {
         lblCreditsDisp.setText("Your current balance: " + credits + "cr");
     }
-    
-    int GetNewBalance()
-    {
+
+    int GetNewBalance() {
         return credits;
     }
 }

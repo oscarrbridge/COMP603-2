@@ -6,7 +6,7 @@ public class frmGamesHome extends javax.swing.JFrame {
     int credits;
 
     int creditBet = 0;
-    
+
     Logger log;
 
     public frmGamesHome(int id, String username, int credits) {
@@ -43,6 +43,11 @@ public class frmGamesHome extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(750, 400));
         setResizable(false);
         setSize(new java.awt.Dimension(750, 400));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(198, 198, 198));
 
@@ -236,7 +241,7 @@ public class frmGamesHome extends javax.swing.JFrame {
         log.AddLog("User Started Blackjack");
 
         if (PlaceBet()) {
-            dialogBlackjack blackjack = new dialogBlackjack(this);
+            dialogBlackjack blackjack = new dialogBlackjack();
             blackjack.setVisible(true);
 
             ChangeCreditsBlackjack(blackjack.GetStatus());
@@ -275,6 +280,10 @@ public class frmGamesHome extends javax.swing.JFrame {
         dialogViewLog view = new dialogViewLog(id);
         view.show();
     }//GEN-LAST:event_btnViewLogMouseClicked
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        UpdateDatabaseCredits();
+    }//GEN-LAST:event_formWindowClosing
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBlackjack;
