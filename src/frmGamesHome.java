@@ -272,7 +272,8 @@ public class frmGamesHome extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSlotsMousePressed
 
     private void btnViewLogMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewLogMouseClicked
-        // TODO add your handling code here:
+        dialogViewLog view = new dialogViewLog(id);
+        view.show();
     }//GEN-LAST:event_btnViewLogMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
