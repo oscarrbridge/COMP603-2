@@ -73,15 +73,15 @@ public class dialogSlots extends javax.swing.JDialog {
             }
         });
 
-        lblRow1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        lblRow1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblRow1.setForeground(new java.awt.Color(255, 255, 255));
         lblRow1.setText("-");
 
-        lblRow2.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        lblRow2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblRow2.setForeground(new java.awt.Color(255, 255, 255));
         lblRow2.setText("-");
 
-        lblRow3.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        lblRow3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblRow3.setForeground(new java.awt.Color(255, 255, 255));
         lblRow3.setText("-");
 
@@ -123,7 +123,7 @@ public class dialogSlots extends javax.swing.JDialog {
                     .addComponent(lblRow3))
                 .addGap(40, 40, 40)
                 .addComponent(btnSpin)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -192,7 +192,7 @@ public class dialogSlots extends javax.swing.JDialog {
     }
 
     private String GetCharacter() {
-        String[] choices = {"🍒", "🍋", "🍇", "🍉", "🔔", "🍀", "💎", "⭐"};
+        String[] choices = {"!", "@", "#", "$", "%", "^", "&", "*"};
 
         Random random = new Random();
         int i = random.nextInt(choices.length);

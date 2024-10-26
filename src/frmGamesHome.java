@@ -252,8 +252,9 @@ public class frmGamesHome extends javax.swing.JFrame {
     private void btnRouletteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRouletteMouseClicked
         //play roulette
         log.AddLog("User Started Roulette");
+        
         if (PlaceBet()) {
-            dialogRoulette roulette = new dialogRoulette(this);
+            dialogRoulette roulette = new dialogRoulette();
             roulette.setVisible(true);
 
             ChangeCreditsRoulette(roulette.GetStatus(), roulette.GetMultiplier());

@@ -7,24 +7,20 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 public class dialogRoulette extends javax.swing.JDialog {
 
-    frmGamesHome parent;
-    
     Wheel wheel = new Wheel();
     ArrayList board = wheel.board();
-    int n ;
+    int n;
     String s;
-    
+
     boolean status = false;
 
-    public dialogRoulette(frmGamesHome parent) {
-        super(parent, true);
+    public dialogRoulette() {
         initComponents();
 
-        this.parent = parent;
-        
+        setModal(true);
+
         ExitSelected.hide();
         ResultText.hide();
         NumberText.hide();
@@ -201,132 +197,118 @@ public class dialogRoulette extends javax.swing.JDialog {
 
     private void FirstThirdSelectedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FirstThirdSelectedMousePressed
         wheel.betMultiplier = 3;
-    // TODO add your handling code here:
+        // TODO add your handling code here:
         n = spinResult();
         try {
             s = wheelColour(n);
         } catch (IOException ex) {
             Logger.getLogger(dialogRoulette.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if((n>0)&&(n<12))
-        {
+        if ((n > 0) && (n < 12)) {
             rouletteWin();
-        } else
-        {
+        } else {
             rouletteLose();
         }
     }//GEN-LAST:event_FirstThirdSelectedMousePressed
 
     private void SecondThirdSelectedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SecondThirdSelectedMousePressed
         wheel.betMultiplier = 3;
-    // TODO add your handling code here:
+        // TODO add your handling code here:
         n = spinResult();
         try {
             s = wheelColour(n);
         } catch (IOException ex) {
             Logger.getLogger(dialogRoulette.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if((n>12)&&(n<=24))
-        {
+        if ((n > 12) && (n <= 24)) {
             rouletteWin();
-        } else
-        {
+        } else {
             rouletteLose();
         }
     }//GEN-LAST:event_SecondThirdSelectedMousePressed
 
     private void ThirdThirdSelectedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ThirdThirdSelectedMousePressed
         wheel.betMultiplier = 3;
-    // TODO add your handling code here:
+        // TODO add your handling code here:
         n = spinResult();
         try {
             s = wheelColour(n);
         } catch (IOException ex) {
             Logger.getLogger(dialogRoulette.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if((n>24)&&(n<=36))
-        {
+        if ((n > 24) && (n <= 36)) {
             rouletteWin();
-        } else
-        {
+        } else {
             rouletteLose();
         }
     }//GEN-LAST:event_ThirdThirdSelectedMousePressed
 
     private void BlacksSelectedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BlacksSelectedMousePressed
         wheel.betMultiplier = 2;
-    // TODO add your handling code here:
+        // TODO add your handling code here:
         n = spinResult();
         try {
             s = wheelColour(n);
         } catch (IOException ex) {
             Logger.getLogger(dialogRoulette.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if(s.equals("Black"))
-        {
+        if (s.equals("Black")) {
             rouletteWin();
-        } else
-        {
+        } else {
             rouletteLose();
         }
     }//GEN-LAST:event_BlacksSelectedMousePressed
 
     private void RedsSelectedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedsSelectedMousePressed
-        wheel.betMultiplier = 2;    
-    // TODO add your handling code here:
+        wheel.betMultiplier = 2;
+        // TODO add your handling code here:
         n = spinResult();
         try {
             s = wheelColour(n);
         } catch (IOException ex) {
             Logger.getLogger(dialogRoulette.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if(s.equals("Red"))
-        {
+        if (s.equals("Red")) {
             rouletteWin();
-        } else
-        {
+        } else {
             rouletteLose();
         }
     }//GEN-LAST:event_RedsSelectedMousePressed
 
     private void FirstHalfSelectedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FirstHalfSelectedMousePressed
         wheel.betMultiplier = 2;
-    // TODO add your handling code here:
+        // TODO add your handling code here:
         n = spinResult();
         try {
             s = wheelColour(n);
         } catch (IOException ex) {
             Logger.getLogger(dialogRoulette.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if((n>0)&&(n<=18))
-        {
+        if ((n > 0) && (n <= 18)) {
             rouletteWin();
-        } else
-        {
+        } else {
             rouletteLose();
         }
     }//GEN-LAST:event_FirstHalfSelectedMousePressed
 
     private void SecondHalfSelectedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SecondHalfSelectedMousePressed
         wheel.betMultiplier = 2;
-    // TODO add your handling code here:
+        // TODO add your handling code here:
         n = spinResult();
         try {
             s = wheelColour(n);
         } catch (IOException ex) {
             Logger.getLogger(dialogRoulette.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if((n>18)&&(n<=36))
-        {
+        if ((n > 18) && (n <= 36)) {
             rouletteWin();
-        } else
-        {
+        } else {
             rouletteLose();
         }
     }//GEN-LAST:event_SecondHalfSelectedMousePressed
 
     private void QuitSelectedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuitSelectedMousePressed
-        
+
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_QuitSelectedMousePressed
@@ -351,80 +333,73 @@ public class dialogRoulette extends javax.swing.JDialog {
     private javax.swing.JButton ThirdThirdSelected;
     // End of variables declaration//GEN-END:variables
 
-   private int spinResult()
-   {
-       return wheel.Spin();
-   }
-   
-   private String wheelColour(int spin) throws IOException
-   {
-       String colour = "";
+    private int spinResult() {
+        return wheel.Spin();
+    }
+
+    private String wheelColour(int spin) throws IOException {
+        String colour = "";
 
         FileReader Fr;
         try {
             Fr = new FileReader("resources/RouletteColours.txt");
             BufferedReader Br = new BufferedReader(Fr);
 
-        for(int k = 0; k<spin-1; k++)
-        {
-            colour = Br.readLine();
-        }
-        Br.close();
+            for (int k = 0; k < spin - 1; k++) {
+                colour = Br.readLine();
+            }
+            Br.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(dialogRoulette.class.getName()).log(Level.SEVERE, null, ex);
         }
         return colour;
-   }
-   
-   private void rouletteWin()
-   {
-       FirstThirdSelected.hide();
-       SecondThirdSelected.hide();
-       ThirdThirdSelected.hide();
-       BlacksSelected.hide();
-       RedsSelected.hide();
-       FirstHalfSelected.hide();
-       SecondHalfSelected.hide();
-       
-       ExitSelected.show();
-       ResultText.show();
-       NumberText.show();
-       ColourText.show();
-       
-       ResultText.setText("You Win!");
-       NumberText.setText("Number Spun: "+n);
-       ColourText.setText("Colour Spun: "+s);
-       
-       status = true;
-   }
-   
-   private void rouletteLose()
-   {
-       FirstThirdSelected.hide();
-       SecondThirdSelected.hide();
-       ThirdThirdSelected.hide();
-       BlacksSelected.hide();
-       RedsSelected.hide();
-       FirstHalfSelected.hide();
-       SecondHalfSelected.hide();
-       
-       ExitSelected.show();
-       ResultText.show();
-       NumberText.show();
-       ColourText.show();
-       
-       ResultText.setText("You Lose!");
-       NumberText.setText("Number Spun: "+n);
-       ColourText.setText("Colour Spun: "+s);
-   }
-   
-   boolean GetStatus()
-   {
-       return status;
-   }
-   
-   int GetMultiplier()
-   {
-       return wheel.betMultiplier;
-   }
+    }
+
+    private void rouletteWin() {
+        FirstThirdSelected.hide();
+        SecondThirdSelected.hide();
+        ThirdThirdSelected.hide();
+        BlacksSelected.hide();
+        RedsSelected.hide();
+        FirstHalfSelected.hide();
+        SecondHalfSelected.hide();
+
+        ExitSelected.show();
+        ResultText.show();
+        NumberText.show();
+        ColourText.show();
+
+        ResultText.setText("You Win!");
+        NumberText.setText("Number Spun: " + n);
+        ColourText.setText("Colour Spun: " + s);
+
+        status = true;
+    }
+
+    private void rouletteLose() {
+        FirstThirdSelected.hide();
+        SecondThirdSelected.hide();
+        ThirdThirdSelected.hide();
+        BlacksSelected.hide();
+        RedsSelected.hide();
+        FirstHalfSelected.hide();
+        SecondHalfSelected.hide();
+
+        ExitSelected.show();
+        ResultText.show();
+        NumberText.show();
+        ColourText.show();
+
+        ResultText.setText("You Lose!");
+        NumberText.setText("Number Spun: " + n);
+        ColourText.setText("Colour Spun: " + s);
+    }
+
+    boolean GetStatus() {
+        return status;
+    }
+
+    int GetMultiplier() {
+        return wheel.betMultiplier;
+    }
 }

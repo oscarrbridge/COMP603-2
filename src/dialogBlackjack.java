@@ -22,6 +22,8 @@ public class dialogBlackjack extends javax.swing.JDialog {
     public dialogBlackjack() {
         initComponents();
 
+        setModal(true);
+
         lblStatus.hide();
         btnExit.hide();
 
@@ -216,7 +218,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
     }
 
     public void DealerWin() {
-       //Dealer won
+        //Dealer won
         btnHit.hide();
         btnStand.hide();
 
@@ -235,7 +237,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
 
         lblStatus.show();
         btnExit.show();
-        
+
         status = true;
     }
 
@@ -262,7 +264,7 @@ public class dialogBlackjack extends javax.swing.JDialog {
 
     private int HandSum(List<Card> hand) {
         //Count the sum of the hand given
-        
+
         int handVal = 0;
         int rankVal;
 
